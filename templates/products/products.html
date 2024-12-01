@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 
-
 {% block content %}
-
+<div class="continent-container">
+  {% for product in products %}
+  <div class="product-card">
+    <div class="product-image">
+      {% comment %} <img src="{{product.image}}"> {% endcomment %}
+    </div>
+    <div class="product-info">
+      <h2 class="product-title">{{ product.name }}</h2>
+      <p class="product-description">{{ product.contact }}.</p>
+      <p class="product-price">${{ product.price }}</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+  {% endfor %}
+ </div>
 
 {% endblock content %}

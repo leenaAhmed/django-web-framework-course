@@ -1,4 +1,25 @@
-<footer>
-   <span class=""> <a href="{% url "index" %}"> Home </a> </span>
-   <span class=""> <a href="{% url "about" %}"> About </a> </span>
-</footer>
+<footer class="footer">
+   <div class="footer-content">
+     <div class="footer-section about">
+       <h2>About Us</h2>
+       <p>trynna learn django.</p>
+     </div>
+     <div class="footer-section links">
+       <h2>Quick Links</h2>
+       <ul>
+         <li><a href="{% url "index" %}">Home</a></li>
+         <li><a href="{% url "about" %}">About</a></li>
+         <li><a href="{% url "products" %}">Products</a></li>
+       </ul>
+     </div>
+     <div class="footer-section contact">
+       <h2>Contact Us</h2>
+       <p>Email: leenaelhosary@gmail.com</p>
+       <p>Phone: +201024982490</p>
+     </div>
+   </div>
+   <div class="footer-bottom">
+     &copy; 2024 | All rights reserved.
+   </div>
+ </footer>
+ 

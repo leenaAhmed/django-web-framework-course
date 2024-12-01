@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Product
 
 # Create your views here.
 
@@ -8,4 +9,5 @@ def product(request):
 
 
 def products(request):
-    return render(request , 'products/products.html')
+    data = Product.objects.all()
+    return render(request , 'products/products.html' , {'products': data})
