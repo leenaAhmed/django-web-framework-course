@@ -1,0 +1,35 @@
+<!-- filter DTL dtl -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if name == 'lina' %}
+        <p> welcome to the lina project </p>
+        <h2> hello {{name | capfirst}}</h2>
+
+        {% elif name == 'marina' %}
+        <p> welcome to the marina project </p>
+
+    {% endif %}
+
+    <p> your age  {{age | default:'not found'}} </p>
+
+    <div>
+        link here <a href="{{url}}" target="_blank">click here</a>
+    </div>
+    <p> slice your name {{full_name | slice:':10'}}</p>
+    <p>{{fileSize | filesizeformat}}</p>
+
+
+    {% for name in full_name %}
+      <span style="color: #004466"> {{name}} </span>
+    {% endfor %}
+     {% comment %} 
+      <img
+        src="{% static "images/GYfxx5AXwAA_ZU8.jfif" %}"
+        class="img-fluid rounded-top"
+        alt=""
+     /> 
+    {% endcomment %}
+    
+{% endblock content %}
+ 
