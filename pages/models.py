@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.views import View 
+from django.http import HttpResponse
 # Create your models here.
 
 
@@ -31,3 +32,13 @@ class User(models.Model):
         return self.name
 
 
+
+
+class MyView(View): 
+    def get(self, request): 
+        # logic to process GET request
+        return HttpResponse('response to GET request') 
+ 
+    def post(self, request): 
+        # <logic to process POST request> 
+        return HttpResponse('response to POST request') 
