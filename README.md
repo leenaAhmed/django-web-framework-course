@@ -60,3 +60,7 @@ To rollback migrations for a specific app (e.g., `pages`) to zero:
 ```bash
 python manage.py migrate pages zero
 ```
+
+
+## The django.views.generic:
+  The django.views.generic module contains several view classes that provide the functionality required to perform tasks such as rendering a template, showing an instance, showing the list of instances, adding a new model instance, updating an instance and so on. 

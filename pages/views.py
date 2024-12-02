@@ -1,13 +1,22 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
 
 def about(request):
-    return render(request, 'pages/about.html')
-
-
+    path = request.path 
+    method = request.method 
+    content=f""" 
+                <div>
+                <h2>Testing Django Request Response Objects</h2> 
+                <p>Request path : " {path}</p> 
+                <p>Request Method :{method}</p>
+                </div> 
+            """
+    
+    return HttpResponse(content) 
+ 
 
 def myview(request):  
 

@@ -5,17 +5,17 @@
  <h1> My product List </h1>
   <div class="continent-container"> 
     {% for product in products %}
-    <div class="product-card">
+    <a class="product-card" href="product/{{product.id}}">
       <div class="product-image">
         <img src="{{product.image.url}}">
       </div>
       <div class="product-info">
         <h2 class="product-title">{{ product.name }}</h2>
-        <p class="product-description">{{ product.contact }}.</p>
+        <p class="product-description">{{ product.content }}.</p>
         <p class="product-price">${{ product.price }}</p>
         <button class="add-to-cart-btn">Add to Cart</button>
       </div>
-    </div>
+    </a>
     {% endfor %}
   </div>
 </div>

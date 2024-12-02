@@ -1,11 +1,17 @@
-from django.http import HttpResponse
+from django.http import Http404, HttpResponse
 from django.shortcuts import render
 from .models import Product
 
 # Create your views here.
 
-def product(request):
-    return render(request , 'products/product.html')
+def product(request, name):
+    print(name)
+    print(Product.objects.get(id=name))
+    try:
+        data = Product.objects.get(id=name)
+    except Product.DoesNotExist:
+        raise Http404("Product not found")
+    return render(request, 'products/product.html' ,{'product': data} )
 
 
 def products(request):
