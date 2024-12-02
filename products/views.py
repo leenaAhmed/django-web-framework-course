@@ -10,4 +10,9 @@ def product(request):
 
 def products(request):
     data = Product.objects.all()
-    return render(request , 'products/products.html' , {'products': data})
+    # data.filter(name__contains='app') // srearch
+    # data.filter(name__exact='lina')
+    # data.filter(price__in=[100, 200])
+    # data.filter(price__range=[10, 500])
+
+    return render(request , 'products/products.html' , {'products': data.order_by('name')})
