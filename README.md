@@ -64,3 +64,25 @@ python manage.py migrate pages zero
 
 ## The django.views.generic:
   The django.views.generic module contains several view classes that provide the functionality required to perform tasks such as rendering a template, showing an instance, showing the list of instances, adding a new model instance, updating an instance and so on. 
+
+
+## reverse() function
+  However, the hard-coded URLs make the application less scalable and difficult to maintain as the project grows. In such a case, you can obtain the URL from the name parameter used in the path() function.
+
+  Start the Django shell.
+
+```bash
+    from django.urls import reverse 
+```
+Django’s `reverse()` function returns the URL path to which it is mapped.
+
+```bash
+  >>> from django.urls import reverse 
+  >>> reverse('index') 
+```
+
+## Application namespace
+ The application namespace is created by defining `app_name` variable in the application’s urls.py and assigning it the name of the app `app_name='demoapp'` 
+
+
+ 

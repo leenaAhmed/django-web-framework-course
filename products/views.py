@@ -10,7 +10,7 @@ def product(request, name):
     try:
         data = Product.objects.get(id=name)
     except Product.DoesNotExist:
-        raise Http404("Product not found")
+        raise Http404("Product does not exist")
     return render(request, 'products/product.html' ,{'product': data} )
 
 

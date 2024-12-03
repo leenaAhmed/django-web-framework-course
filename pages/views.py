@@ -5,6 +5,7 @@ def index(request):
     return render(request, 'pages/index.html')
 
 def about(request):
+
     path = request.path 
     method = request.method 
     content=f""" 
@@ -15,7 +16,16 @@ def about(request):
                 </div> 
             """
     
-    return HttpResponse(content) 
+    # return HttpResponse(content) 
+    data = {
+        "path": path,
+        "method" : method,
+    }
+    return render(request, 'pages/about.html', {"data": data})
+
+
+def contactform(request):
+    return render(request, 'pages/contact.html')
  
 
 def myview(request):  

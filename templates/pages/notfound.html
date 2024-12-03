@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/notfound.css" %}"/>
+
+{% block content %}
+<div class="not-found-container">
+    <h1 class="error-code">404</h1>
+    <h2 class="error-message">Page Not Found</h2>
+    <p class="error-description">Sorry, the page you're looking for doesn't exist. It might have been removed or the URL is incorrect.</p>
+    <a href="/" class="home-button">Go Back Home</a>
+</div>
+{% endblock content %}

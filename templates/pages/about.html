@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
-{% load static %}
+{% comment %} {% load static %} {% endcomment %}
 
 {% block content %}
-
+   <div>
+        <h2>Testing Django Request Response Objects</h2> 
+        <p>Request path : " {{data.path}}</p> 
+        <p>Request Method :{{data.method}}</p>
+    </div>   
 {% endblock content %}
