@@ -122,3 +122,18 @@ Django’s `reverse()` function returns the URL path to which it is mapped.
  - So you can think of `makemigrations` as the command that generates the sql commands and
   `migrate` as the command where those sql commands are executed.
 - **migrate is responsible for applying and undoing migrations.**
+- The X symbol represents the status of applying migrations after making them
+
+## The Django object-relational mapping (ORM):
+  - The ORM layer maps this model to a database table in the Django project. 
+    Each attribute of a model class represents a field in the table. 
+
+  - The Object-Relational Mapper (ORM) is one of Django’s most powerful features, allowing you to interact with your database in the same way that you would with SQL.
+  
+  - Django’s ORM is essentially a pythonic technique to build SQL to query and edit your database and obtain results.
+
+  ### Django fields
+  ***Field properties*** :  
+    - primary_key
+      Primary keys serve as unique identifiers for each row in a database table. Foreign keys link data in one table to the data in another table
+    - `default` , `unique` ,`choices` ,
