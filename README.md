@@ -152,3 +152,14 @@ Django’s `reverse()` function returns the URL path to which it is mapped.
 - It is useful for smaller applications and for the development of a prototype to be upgraded eventually for   databases that are scalable and support client-server architecture.
 
  - MySQL is an open-source database and has a lot of advantages over SQLite, such as scalability and authentication. 
+
+
+## Templates
+
+### `{% csrf_token %}`
+  This tag is used in a form template as protection to prevent Cross Site Request Forgeries (CSRF). This tag generates a token on the server-side to make sure to cross-check that the incoming requests do not contain the token. If found, they are not executed.
+
+### `{% include }%`
+  Loads a template and renders it with the current context. This is a way of "including" other templates within a template. The template name can either be a variable or a hard-coded (quoted) string, in either single or double quotes.
+### {% with %}
+  This tag sets a local variable that is available between {% with %}and {% endwidth %} tags.
