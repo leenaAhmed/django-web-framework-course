@@ -10,6 +10,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name;
+    class Meta: 
+        permissions = [('can_change_category', 'Can change category')] 
 
 class Product(models.Model):
     name = models.CharField(max_length=50 , verbose_name='Product Name')

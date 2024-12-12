@@ -137,3 +137,18 @@ Django’s `reverse()` function returns the URL path to which it is mapped.
     - primary_key
       Primary keys serve as unique identifiers for each row in a database table. Foreign keys link data in one table to the data in another table
     - `default` , `unique` ,`choices` ,
+
+## Admin permission by shell 
+
+```
+  >>> from django.contrib.auth.models import User
+  >>> user =  User.objects.create_user('aya', 'aya@gmail.com' , '#123abA')
+  >>> user_name = User.objects.get(username= 'aya')
+```
+
+### MySQL Vs SQLite
+- The SQLite database has a lot of limitations.
+- It is serverless and doesn't have a user management system. 
+- It is useful for smaller applications and for the development of a prototype to be upgraded eventually for   databases that are scalable and support client-server architecture.
+
+ - MySQL is an open-source database and has a lot of advantages over SQLite, such as scalability and authentication. 

@@ -37,10 +37,13 @@ class User(models.Model):
 
 
 class Contact(models.Model):
-    Full_name = models.CharField(max_length=20,  null=True)
+    full_name = models.CharField(max_length=20,  null=True)
     email = models.EmailField(null=True)
     message = models.CharField(max_length=120, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.full_name
 
 class MyView(View): 
     def get(self, request): 
